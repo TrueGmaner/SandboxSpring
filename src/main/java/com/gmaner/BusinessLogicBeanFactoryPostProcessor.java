@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class BusinessLogicBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
-        BeanDefinition businessLogic = configurableListableBeanFactory.getBeanDefinition("businessLogic");
+        BeanDefinition businessLogic = configurableListableBeanFactory.getBeanDefinition("businessLogic2");
         System.out.println("I am BFPP");
         System.out.println(businessLogic.getScope());
         businessLogic.setScope("singleton");

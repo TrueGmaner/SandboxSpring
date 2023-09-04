@@ -10,7 +10,7 @@ import javax.annotation.Priority;
 @Configuration
 public class BeanConfiguration {
     @Bean(name = "businessLogic")
-    @Scope(scopeName = "singleton")
+    @Scope(scopeName = "prototype")
     public BusinessLogic getBusinessLogic() {
         return new BusinessLogic(1L, "German Kostya");
     }
@@ -19,6 +19,6 @@ public class BeanConfiguration {
     @Scope(scopeName = "singleton")
     //@Primary
     public BusinessLogic getBusinessLogic2() {
-        return new BusinessLogic(2L, "Ivan Ivanov");
+        return new BusinessLogic(2L, "Ivanov Ivan");
     }
 }
