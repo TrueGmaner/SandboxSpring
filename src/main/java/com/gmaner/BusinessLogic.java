@@ -25,11 +25,11 @@ public class BusinessLogic {
 
     @PostConstruct
     public void iAmPostConstructMethod() {
-        System.out.println("Init " + name);
+        System.out.println("Init");
     }
 
     @PreDestroy
     public void destroy() {
-        System.out.println("Destroy " + name);
+        System.out.println("Destroy");
     }
 }
